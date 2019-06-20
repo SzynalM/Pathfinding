@@ -1,42 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class ObstacleGenerator : MonoBehaviour
+public class ObstacleGenerator
 {
-    private int maxObstacles = 10;
-    [SerializeField]
-    private float defaultObstacleProbability = 0.1f;
-    private float obstacleProbability;
+    private int obstaclesSet;
+    private int maxObstacles;
+    private int edgeLength;
+    private INode[,] nodes;
 
-    public void AddObstacles(GameObject[,] nodes, int amount)
+    public ObstacleGenerator(INode[,] _nodes, int _maxObstacles, int _edgeLength)
     {
-        int arrayLength = nodes.GetLength(0);
-        Debug.Log("Length: " + arrayLength);
-        obstacleProbability = defaultObstacleProbability;
-        for (int i = 0; i < arrayLength; i++)
-        {
-            for (int j = 0; j < arrayLength; j++)
-            {
-                if (amount < maxObstacles)
-                {
-                    Debug.Log("J " + j);
-                    if (Random.value < obstacleProbability)
-                    {
-                        nodes[i, j].GetComponent<Node>().IsObstructed = true;
-                        amount++;
-                    }
-                    if (ApproachingEndOfNodes(arrayLength - 1, amount, i, j))
-                    {
-                        obstacleProbability = 1;
-                        Debug.Log("Approaching");
-
-                    }
-                }
-            }
-        }
-    }
-
-    private bool ApproachingEndOfNodes(int maximumIndex, int amount, int i, int j)
-    {
-        return i == 9 && j > 4 && amount < maxObstacles;
+        maxObstacles = _maxObstacles;
+        edgeLength = _edgeLength;
+        nodes = _nodes;
+   
     }
 }

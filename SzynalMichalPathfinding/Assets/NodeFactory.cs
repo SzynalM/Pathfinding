@@ -1,20 +1,18 @@
 ﻿using UnityEngine;
-using System.Collections;
+using Zenject;
 
-public class NodeFactory : MonoBehaviour, IFactory
+public class NodeFactory : MonoBehaviour, IFactory<GameObject, Transform, Vector2, INode>
 {
-    private GameObject[,] nodes;
-    public GameObject[,] Nodes { get { return nodes; } }
-
-    public void Create(GameObject prefab, Vector2 position, int amount, Transform parent)
+    public INode Create(GameObject prefab, Transform parent, Vector2 position)
     {
-        nodes = new GameObject[amount, amount];
-        for (int i = 0; i < amount; i++)
+        if(prefab.GetComponent<INode>() == null)
         {
-            for (int j = 0; j < amount; j++)
-            {
-                nodes[i, j] = (Instantiate(prefab, new Vector2(position.x + i, position.y + j), Quaternion.identity, parent));
-            }
+            Debug.LogError("Invalid node prefab");
+            return null;
         }
+        INode node = Instantiate(prefab, position, Quaternion.identity, parent).GetComponent<INode>();
+        node.XPosition = position.x;
+        node.YPosition = position.y;
+        return node;
     }
 }

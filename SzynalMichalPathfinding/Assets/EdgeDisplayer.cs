@@ -19,17 +19,6 @@ public class EdgeDisplayer : MonoBehaviour
         line.endColor = Color.red;
     }
 
-    [ContextMenu("xd")]
-    private void GO()
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            for (int j = 0; j < 10; j++)
-            {
-                line.SetPositions(GetNodePositions(nodeFactory.Nodes, 10).ToArray());
-            }
-        }
-    }
 
     private List<Vector3> GetNodePositions(GameObject[,] nodes, int length)
     {
