@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7757863252176051022}
   - component: {fileID: 3362942687396764424}
   - component: {fileID: 4492175507946433695}
-  - component: {fileID: 1027101792556322975}
+  - component: {fileID: 7940916131973834475}
   m_Layer: 0
   m_Name: AStarNodePrefab
   m_TagString: Untagged
@@ -189,7 +189,7 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!114 &1027101792556322975
+--- !u!114 &7940916131973834475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,6 +198,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 892467580751160174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9feef19d3d1b8842a6f86b785388832, type: 3}
+  m_Script: {fileID: 11500000, guid: e28271a6e124c1c40bafdeb40a28bbcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Parent: {fileID: 0}

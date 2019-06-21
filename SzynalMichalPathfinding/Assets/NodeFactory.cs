@@ -11,6 +11,7 @@ public class NodeFactory : MonoBehaviour, IFactory<GameObject, Transform, Vector
             return null;
         }
         INode node = Instantiate(prefab, position, Quaternion.identity, parent).GetComponent<INode>();
+        node.Position = position - (Vector2)parent.position;
         return node;
     }
 }

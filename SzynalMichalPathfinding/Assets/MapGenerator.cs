@@ -1,26 +1,32 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using Zenject;
 
 public class MapGenerator : MonoBehaviour
 {
     [SerializeField]
+    private DijkstraPathfinding pathfinding;
+    [SerializeField]
+    private EdgeDisplayer edgeDisplayer;
+    [SerializeField]
     private GameObject nodePrefab;
     [SerializeField]
-    private Transform mapOrigin;
-    [SerializeField]
     private Transform nodeParent;
-    [SerializeField]
-    private int edgeLength;
-    Vector2 startPoint;
-    Vector2 endPoint;
+    public int edgeLength;
+    public Vector2 startPoint;
+    public Vector2 endPoint;
     [SerializeField]
     private Sprite startPointSprite;
     [SerializeField]
     private Sprite endPointSprite;
+    [SerializeField]
+    private TMP_InputField edgeLengthInputField;
+    [SerializeField]
+    private TMP_InputField amountOfObstaclesInputField;
 
     private IFactory<GameObject, Transform, Vector2, INode> nodeFactory;
-    private INode[,] nodes;
+    public INode[,] nodes;
 
     [Inject]
     public void Initialize(IFactory<GameObject, Transform, Vector2, INode> _nodeFactory)
@@ -30,20 +36,30 @@ public class MapGenerator : MonoBehaviour
 
     public void GenerateMap()
     {
+        if (int.Parse(edgeLengthInputField.text) >= 10)
+        {
+            edgeLength = int.Parse(edgeLengthInputField.text);
+        }
+        else
+        {
+            Debug.LogError("Value too small");
+        }
         nodes = new INode[edgeLength, edgeLength];
         DestroyExistingNodes();
         for (int x = 0; x < edgeLength; x++)
         {
             for (int y = 0; y < edgeLength; y++)
             {
-                nodes[x, y] = nodeFactory.Create(nodePrefab, nodeParent, new Vector2(mapOrigin.position.x + x, mapOrigin.position.y + y));
+                nodes[x, y] = nodeFactory.Create(nodePrefab, nodeParent, new Vector2(nodeParent.position.x + x, nodeParent.position.y + y));
             }
         }
 
         SetNeighbours();
-        SetObstacles(4);
+        SetObstacles(int.Parse(amountOfObstaclesInputField.text));
         SetStart();
         SetEnd();
+        edgeDisplayer.ShowLines();
+        pathfinding.FindPath(startPoint, endPoint);
     }
 
     private void DestroyExistingNodes()
@@ -70,7 +86,7 @@ public class MapGenerator : MonoBehaviour
         if (nodes[xPos, yPos].IsObstructed == false)
         {
             startPoint = new Vector2(xPos, yPos);
-            nodes[xPos, yPos].spriteRenderer.sprite = startPointSprite;
+            nodes[xPos, yPos].SpriteRenderer.sprite = startPointSprite;
         }
     }
     private void SetEnd()
@@ -81,7 +97,7 @@ public class MapGenerator : MonoBehaviour
         {
             xPos = UnityEngine.Random.Range(0, edgeLength - 1);
             yPos = UnityEngine.Random.Range(0, edgeLength - 1);
-            if((xPos == startPoint.x && yPos == startPoint.y))
+            if ((xPos == startPoint.x && yPos == startPoint.y))
             {
                 continue;
             }
@@ -89,7 +105,7 @@ public class MapGenerator : MonoBehaviour
         if (nodes[xPos, yPos].IsObstructed == false)
         {
             endPoint = new Vector2(xPos, yPos);
-            nodes[xPos, yPos].spriteRenderer.sprite = endPointSprite;
+            nodes[xPos, yPos].SpriteRenderer.sprite = endPointSprite;
         }
     }
 
@@ -108,7 +124,7 @@ public class MapGenerator : MonoBehaviour
                 Obstacle obstacle = new Obstacle(new Vector2Int(xObstaclePosition, yObstaclePosition), obstacleWidth, obstacleHeight);
                 foreach (Vector2Int position in obstacle.GetObstacleVolume())
                 {
-                    nodes[position.x, position.y].color = color;
+                    nodes[position.x, position.y].Color = color;
                     nodes[position.x, position.y].IsObstructed = true;
                 }
             }
@@ -132,22 +148,22 @@ public class MapGenerator : MonoBehaviour
 
     private void AssignNeightboursToNode(int x, int y)
     {
-        nodes[x, y].Neighbours = new List<Vector2>();
+        nodes[x, y].Neighbours = new List<INode>();
         if (x - 1 >= 0)
         {
-            nodes[x, y].Neighbours.Add(new Vector2(x - 1, y));
+            nodes[x, y].Neighbours.Add(nodes[x - 1, y]);
         }
         if (x + 1 < edgeLength)
         {
-            nodes[x, y].Neighbours.Add(new Vector2(x + 1, y));
+            nodes[x, y].Neighbours.Add(nodes[x + 1, y]);
         }
         if (y - 1 >= 0)
         {
-            nodes[x, y].Neighbours.Add(new Vector2(x, y - 1));
+            nodes[x, y].Neighbours.Add(nodes[x, y - 1]);
         }
         if (y + 1 < edgeLength)
         {
-            nodes[x, y].Neighbours.Add(new Vector2(x, y + 1));
+            nodes[x, y].Neighbours.Add(nodes[x, y + 1]);
         }
     }
 }

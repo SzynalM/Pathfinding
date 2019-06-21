@@ -6,7 +6,7 @@ using UnityEngine;
 public class EdgeDisplayer : MonoBehaviour
 {
     [SerializeField]
-    private NodeFactory nodeFactory;
+    private MapGenerator mapGenerator;
     private LineRenderer line;
 
     void Start()
@@ -19,6 +19,25 @@ public class EdgeDisplayer : MonoBehaviour
         line.endColor = Color.red;
     }
 
+    public void ShowLines()
+    {
+        line.SetPositions(GetNodePositions(GetNodes(mapGenerator.nodes, mapGenerator.edgeLength), mapGenerator.edgeLength).ToArray());
+
+    }
+
+    private GameObject[,] GetNodes(INode[,] originalNodes, int edgeLength)
+    {
+        GameObject[,] nodes = new GameObject[edgeLength,edgeLength];
+
+        for(int i = 0; i < edgeLength; i++)
+        {
+            for(int j = 0; j < edgeLength; j++)
+            {
+                nodes[i, j] = originalNodes[i, j].SpriteRenderer.gameObject;
+            }
+        }
+        return nodes;
+    }
 
     private List<Vector3> GetNodePositions(GameObject[,] nodes, int length)
     {
