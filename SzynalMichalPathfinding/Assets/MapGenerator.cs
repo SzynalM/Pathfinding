@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -6,11 +7,15 @@ using Zenject;
 public class MapGenerator : MonoBehaviour
 {
     [SerializeField]
-    private DijkstraPathfinding pathfinding;
+    private TMP_Dropdown algorithChoice;
     [SerializeField]
-    private EdgeDisplayer edgeDisplayer;
+    private DijkstraPathfinding dijkstraPathfinding;
     [SerializeField]
-    private GameObject nodePrefab;
+    private AStarPathfinding aStarPathfinding;
+    [SerializeField]
+    private GameObject dijkstraNodePrefab;
+    [SerializeField]
+    private GameObject astarNodePrefab;
     [SerializeField]
     private Transform nodeParent;
     public int edgeLength;
@@ -24,6 +29,8 @@ public class MapGenerator : MonoBehaviour
     private TMP_InputField edgeLengthInputField;
     [SerializeField]
     private TMP_InputField amountOfObstaclesInputField;
+    [SerializeField]
+    private DataLoader dataLoader;
 
     private IFactory<GameObject, Transform, Vector2, INode> nodeFactory;
     public INode[,] nodes;
@@ -34,7 +41,7 @@ public class MapGenerator : MonoBehaviour
         nodeFactory = _nodeFactory;
     }
 
-    public void GenerateMap()
+    public void GenerateMap(bool Loaded)
     {
         if (int.Parse(edgeLengthInputField.text) >= 10)
         {
@@ -46,20 +53,93 @@ public class MapGenerator : MonoBehaviour
         }
         nodes = new INode[edgeLength, edgeLength];
         DestroyExistingNodes();
+        if (Loaded)
+        {
+            Node[,] loadedNodes = dataLoader.LoadMap();
+
+
+            for (int x = 0; x < edgeLength; x++)
+            {
+                for (int y = 0; y < edgeLength; y++)
+                {
+                    Debug.LogWarning(loadedNodes[x, y].Position + " " + loadedNodes[x, y].IsEndPoint + " " + loadedNodes[x, y].IsStartPoint + " " + loadedNodes[x, y].IsObstructed);
+                    if (algorithChoice.value == 0)
+                    {
+                        nodes[x, y] = nodeFactory.Create(dijkstraNodePrefab, nodeParent, new Vector2(nodeParent.position.x + x, nodeParent.position.y + y));
+
+                    }
+                    else
+                    {
+                        nodes[x, y] = nodeFactory.Create(astarNodePrefab, nodeParent, new Vector2(nodeParent.position.x + x, nodeParent.position.y + y));
+
+                    }
+                    nodes[x, y].IsObstructed = loadedNodes[x, y].IsObstructed;
+                    nodes[x, y].Parent = loadedNodes[x, y].Parent;
+                    nodes[x, y].IsStartPoint = loadedNodes[x, y].IsStartPoint;
+                    nodes[x, y].IsEndPoint = loadedNodes[x, y].IsEndPoint;
+                    if (nodes[x, y].IsStartPoint == true)
+                    {
+                        startPoint = nodes[x, y].Position;
+                    }
+                    if (nodes[x, y].IsEndPoint == true)
+                    {
+                        endPoint = nodes[x, y].Position;
+                    }
+                }
+            }
+            SetNeighbours();
+            if (algorithChoice.value == 0)
+            {
+                dijkstraPathfinding.FindPath(startPoint, endPoint);
+            }
+            else
+            {
+                aStarPathfinding.FindPath(startPoint, endPoint);
+            }
+            return;
+        }
         for (int x = 0; x < edgeLength; x++)
         {
             for (int y = 0; y < edgeLength; y++)
             {
-                nodes[x, y] = nodeFactory.Create(nodePrefab, nodeParent, new Vector2(nodeParent.position.x + x, nodeParent.position.y + y));
+                if (algorithChoice.value == 0)
+                {
+                    nodes[x, y] = nodeFactory.Create(dijkstraNodePrefab, nodeParent, new Vector2(nodeParent.position.x + x, nodeParent.position.y + y));
+
+                }
+                else
+                {
+                    nodes[x, y] = nodeFactory.Create(astarNodePrefab, nodeParent, new Vector2(nodeParent.position.x + x, nodeParent.position.y + y));
+
+                }
             }
         }
-
         SetNeighbours();
         SetObstacles(int.Parse(amountOfObstaclesInputField.text));
         SetStart();
         SetEnd();
-        edgeDisplayer.ShowLines();
-        pathfinding.FindPath(startPoint, endPoint);
+        Debug.LogWarning("Algo choice value" + algorithChoice.value);
+        if (algorithChoice.value == 0)
+        {
+            Debug.LogWarning("Dijkstra chosen");
+            dijkstraPathfinding.FindPath(startPoint, endPoint);
+        }
+        else
+        {
+            Debug.LogWarning("Astar chosen");
+            aStarPathfinding.FindPath(startPoint, endPoint);
+        }
+    }
+
+    public void LoadData()
+    {
+        dataLoader.LoadMap();
+    }
+
+    public void SaveNodesToFile()
+    {
+        DataSaver ds = new DataSaver();
+        ds.SaveGame(GetNodes(nodes, edgeLength));
     }
 
     private void DestroyExistingNodes()
@@ -86,7 +166,7 @@ public class MapGenerator : MonoBehaviour
         if (nodes[xPos, yPos].IsObstructed == false)
         {
             startPoint = new Vector2(xPos, yPos);
-            nodes[xPos, yPos].SpriteRenderer.sprite = startPointSprite;
+            nodes[xPos, yPos].IsStartPoint = true;
         }
     }
     private void SetEnd()
@@ -105,7 +185,7 @@ public class MapGenerator : MonoBehaviour
         if (nodes[xPos, yPos].IsObstructed == false)
         {
             endPoint = new Vector2(xPos, yPos);
-            nodes[xPos, yPos].SpriteRenderer.sprite = endPointSprite;
+            nodes[xPos, yPos].IsEndPoint = true;
         }
     }
 
@@ -124,7 +204,6 @@ public class MapGenerator : MonoBehaviour
                 Obstacle obstacle = new Obstacle(new Vector2Int(xObstaclePosition, yObstaclePosition), obstacleWidth, obstacleHeight);
                 foreach (Vector2Int position in obstacle.GetObstacleVolume())
                 {
-                    nodes[position.x, position.y].Color = color;
                     nodes[position.x, position.y].IsObstructed = true;
                 }
             }
@@ -133,6 +212,27 @@ public class MapGenerator : MonoBehaviour
                 i--;
             }
         }
+    }
+
+    private Node[,] GetNodes(INode[,] nodes, int length)
+    {
+        Node[,] result = new Node[length, length];
+        for (int i = 0; i < length; i++)
+        {
+            for (int j = 0; j < length; j++)
+            {
+                Node node = new Node()
+                {
+                    Position = nodes[i, j].Position,
+                    IsObstructed = nodes[i, j].IsObstructed,
+                    IsStartPoint = nodes[i, j].IsStartPoint,
+                    IsEndPoint = nodes[i, j].IsEndPoint
+                };
+                result[i, j] = node;
+                Debug.Log("result: " + result[i, j].Position);
+            }
+        }
+        return result;
     }
 
     private void SetNeighbours()
@@ -148,22 +248,33 @@ public class MapGenerator : MonoBehaviour
 
     private void AssignNeightboursToNode(int x, int y)
     {
-        nodes[x, y].Neighbours = new List<INode>();
+        List<INode> currentNeighbours = new List<INode>();
         if (x - 1 >= 0)
         {
-            nodes[x, y].Neighbours.Add(nodes[x - 1, y]);
+            currentNeighbours.Add(nodes[x - 1, y]);
         }
         if (x + 1 < edgeLength)
         {
-            nodes[x, y].Neighbours.Add(nodes[x + 1, y]);
+            currentNeighbours.Add(nodes[x + 1, y]);
         }
         if (y - 1 >= 0)
         {
-            nodes[x, y].Neighbours.Add(nodes[x, y - 1]);
+            currentNeighbours.Add(nodes[x, y - 1]);
         }
         if (y + 1 < edgeLength)
         {
-            nodes[x, y].Neighbours.Add(nodes[x, y + 1]);
+            currentNeighbours.Add(nodes[x, y + 1]);
         }
+        nodes[x, y].Neighbours = currentNeighbours;
     }
+}
+
+[Serializable]
+public class Node
+{
+    public Vector2 Position { get; set; }
+    public bool IsObstructed { get; set; }
+    public INode Parent { get; set; }
+    public bool IsStartPoint { get; set; }
+    public bool IsEndPoint { get; set; }
 }

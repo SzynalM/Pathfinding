@@ -1,10 +1,8 @@
-﻿using System;
-
-public static class DataValidation
+﻿public static class DataValidation
 {
-    public static void Validate(int amountOfObstacles, int edgeLength, Action<bool> callback)
+    public static bool Validate(int amountOfObstacles, int edgeLength)
     {
-        callback.Invoke(CanObstacleBePlaced(amountOfObstacles, edgeLength));
+        return CanObstacleBePlaced(amountOfObstacles, edgeLength);
     }
 
     private static bool CanObstacleBePlaced(int amountOfObstacles, int edgeLength)

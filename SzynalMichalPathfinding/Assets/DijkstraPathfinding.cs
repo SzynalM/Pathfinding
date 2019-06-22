@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class DijkstraPathfinding : MonoBehaviour, IPathfinder
 {
@@ -30,13 +31,13 @@ public class DijkstraPathfinding : MonoBehaviour, IPathfinder
             unexploredNodes.Remove(currentNode);
 
             List<DijkstraNode> neighbours = GetNeighbours(currentNode.Neighbours);
-            foreach (DijkstraNode neighNode in neighbours)
+            foreach (DijkstraNode neighbour in neighbours)
             {
-                DijkstraNode node = neighNode.GetComponent<DijkstraNode>();
+                DijkstraNode node = neighbour.GetComponent<DijkstraNode>();
 
-                if (unexploredNodes.Contains(neighNode) && !node.IsObstructed)
+                if (unexploredNodes.Contains(neighbour) && !node.IsObstructed)
                 {
-                    int distance = NodeDistanceCalculator.GetDistance(neighNode.Position, currentNode.Position);
+                    int distance = NodeDistanceCalculator.GetDistance(neighbour.Position, currentNode.Position);
                     distance = currentNode.DistanceFromStart + distance;
                     if (distance < node.DistanceFromStart)
                     {
@@ -63,15 +64,30 @@ public class DijkstraPathfinding : MonoBehaviour, IPathfinder
         List<DijkstraNode> FinalPath = new List<DijkstraNode>();
         FinalPath.Add(a_EndNode);
         DijkstraNode currentNode = a_EndNode;
+        Vector2 previousPosition = new Vector2();
         while (currentNode != a_StartingNode)
         {
-            currentNode = currentNode.Parent;
+            if(currentNode == null)
+            {
+                Debug.LogError("No path found");
+                return;
+            }
+            currentNode = currentNode.Parent as DijkstraNode;
             FinalPath.Add(currentNode);
         }
         FinalPath.Reverse();
-        foreach (DijkstraNode node in FinalPath)
+        FinalPath[0].SpriteRenderer.color = Color.green;
+        for (int i = 1; i < FinalPath.Count; i++)
         {
-            node.SpriteRenderer.color = Color.red;
+            DijkstraNode node = FinalPath[i];
+            previousPosition = FinalPath[i -1].Position;
+            node.SpriteRenderer.color = Color.green;
+            LineRenderer currentRenderer = node.lines.Where(x => (previousPosition - node.Position) * 10 == (Vector2)x.GetPosition(1)).First();
+            currentRenderer.startColor = Color.black;
+            currentRenderer.endColor = Color.black;
+            currentRenderer.startWidth = .2f;
+            currentRenderer.endWidth = .2f;
+            currentRenderer.sortingOrder = -1;
         }
     }
 

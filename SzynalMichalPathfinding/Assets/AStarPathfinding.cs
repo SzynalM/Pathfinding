@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class AStarPathfinding : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class AStarPathfinding : MonoBehaviour
 
     public void FindPath(Vector3 startPoint, Vector3 endPoint)
     {
+        Debug.Log("Astar pathfinding");
         AStarNode StartNode = (AStarNode)mapGenerator.nodes[(int)startPoint.x, (int)startPoint.y];
         AStarNode TargetNode = (AStarNode)mapGenerator.nodes[(int)endPoint.x, (int)endPoint.y];
 
@@ -32,6 +34,7 @@ public class AStarPathfinding : MonoBehaviour
             if (CurrentNode == TargetNode)
             {
                 GetFinalPath(StartNode, TargetNode);
+                return;
             }
 
             foreach (AStarNode NeighborNode in CurrentNode.Neighbours)
@@ -54,8 +57,8 @@ public class AStarPathfinding : MonoBehaviour
                     }
                 }
             }
-
         }
+        Debug.LogError("No path found");
     }
 
 
@@ -64,18 +67,31 @@ public class AStarPathfinding : MonoBehaviour
     {
         List<AStarNode> FinalPath = new List<AStarNode>();
         FinalPath.Add(a_EndNode);
-        AStarNode CurrentNode = a_EndNode;
-
-        while (CurrentNode != a_StartingNode)
+        AStarNode currentNode = a_EndNode;
+        Vector2 previousPosition = new Vector2();
+        while (currentNode != a_StartingNode)
         {
-            CurrentNode = CurrentNode.Parent;
-            FinalPath.Add(CurrentNode);
+            if (currentNode == null)
+            {
+                Debug.LogError("No path found");
+                return;
+            }
+            currentNode = currentNode.Parent as AStarNode;
+            FinalPath.Add(currentNode);
         }
-
         FinalPath.Reverse();
-        foreach (AStarNode node in FinalPath)
+        FinalPath[0].SpriteRenderer.color = Color.green;
+        for (int i = 1; i < FinalPath.Count; i++)
         {
-            node.SpriteRenderer.color = Color.red;
+            AStarNode node = FinalPath[i];
+            previousPosition = FinalPath[i - 1].Position;
+            node.SpriteRenderer.color = Color.green;
+            LineRenderer currentRenderer = node.lines.Where(x => (previousPosition - node.Position) * 10 == (Vector2)x.GetPosition(1)).First();
+            currentRenderer.startColor = Color.black;
+            currentRenderer.endColor = Color.black;
+            currentRenderer.startWidth = .2f;
+            currentRenderer.endWidth = .2f;
+            currentRenderer.sortingOrder = -1;
         }
     }
 }
