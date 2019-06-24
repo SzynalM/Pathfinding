@@ -6,7 +6,6 @@
         "y": 0.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -16,7 +15,6 @@
         "y": 1.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -26,7 +24,6 @@
         "y": 2.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -35,8 +32,7 @@
         "x": 0.0,
         "y": 3.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -45,8 +41,7 @@
         "x": 0.0,
         "y": 4.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -56,7 +51,6 @@
         "y": 5.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -66,7 +60,6 @@
         "y": 6.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -76,7 +69,6 @@
         "y": 7.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -86,7 +78,6 @@
         "y": 8.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -96,107 +87,6 @@
         "y": 9.0
       },
       "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 0.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 0.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 0.0,
-        "y": 12.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 0.0,
-        "y": 13.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 0.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 0.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 0.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 0.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 0.0,
-        "y": 18.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 0.0,
-        "y": 19.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     }
@@ -208,7 +98,6 @@
         "y": 0.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -218,7 +107,6 @@
         "y": 1.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -228,7 +116,6 @@
         "y": 2.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -237,8 +124,7 @@
         "x": 1.0,
         "y": 3.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -247,8 +133,7 @@
         "x": 1.0,
         "y": 4.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -258,7 +143,6 @@
         "y": 5.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -268,7 +152,6 @@
         "y": 6.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -278,7 +161,6 @@
         "y": 7.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -288,7 +170,6 @@
         "y": 8.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -298,107 +179,6 @@
         "y": 9.0
       },
       "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 1.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 1.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 1.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 1.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 1.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 1.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 1.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 1.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 1.0,
-        "y": 18.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 1.0,
-        "y": 19.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     }
@@ -409,8 +189,7 @@
         "x": 2.0,
         "y": 0.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -420,7 +199,6 @@
         "y": 1.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -430,7 +208,6 @@
         "y": 2.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -440,7 +217,6 @@
         "y": 3.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -449,8 +225,7 @@
         "x": 2.0,
         "y": 4.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -459,8 +234,7 @@
         "x": 2.0,
         "y": 5.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -470,7 +244,6 @@
         "y": 6.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -480,7 +253,6 @@
         "y": 7.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -490,7 +262,6 @@
         "y": 8.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -500,381 +271,163 @@
         "y": 9.0
       },
       "IsObstructed": false,
-      "Parent": null,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    }
+  ],
+  [
+    {
+      "Position": {
+        "x": 3.0,
+        "y": 0.0
+      },
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
-        "x": 2.0,
-        "y": 10.0
+        "x": 3.0,
+        "y": 1.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
-        "x": 2.0,
-        "y": 11.0
+        "x": 3.0,
+        "y": 2.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
-        "x": 2.0,
-        "y": 12.0
+        "x": 3.0,
+        "y": 3.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
-        "x": 2.0,
-        "y": 13.0
+        "x": 3.0,
+        "y": 4.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
-        "x": 2.0,
-        "y": 14.0
+        "x": 3.0,
+        "y": 5.0
+      },
+      "IsObstructed": true,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 3.0,
+        "y": 6.0
       },
       "IsObstructed": false,
-      "Parent": null,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 3.0,
+        "y": 7.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 3.0,
+        "y": 8.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 3.0,
+        "y": 9.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    }
+  ],
+  [
+    {
+      "Position": {
+        "x": 4.0,
+        "y": 0.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 4.0,
+        "y": 1.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 4.0,
+        "y": 2.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 4.0,
+        "y": 3.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 4.0,
+        "y": 4.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 4.0,
+        "y": 5.0
+      },
+      "IsObstructed": false,
       "IsStartPoint": false,
       "IsEndPoint": true
     },
     {
       "Position": {
-        "x": 2.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 2.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 2.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 2.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 2.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 0.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 1.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 2.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 3.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 9.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 10.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 3.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 0.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 1.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 2.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 3.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
         "x": 4.0,
         "y": 6.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -884,7 +437,6 @@
         "y": 7.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -894,7 +446,6 @@
         "y": 8.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -903,108 +454,7 @@
         "x": 4.0,
         "y": 9.0
       },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 10.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 11.0
-      },
       "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 4.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     }
@@ -1015,8 +465,7 @@
         "x": 5.0,
         "y": 0.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1024,593 +473,264 @@
       "Position": {
         "x": 5.0,
         "y": 1.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 2.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 3.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 9.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 5.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 0.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 1.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 2.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 3.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 9.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 10.0
       },
       "IsObstructed": true,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
-        "x": 6.0,
-        "y": 11.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 6.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 7.0,
-        "y": 0.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 7.0,
-        "y": 1.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 7.0,
+        "x": 5.0,
         "y": 2.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
-        "x": 7.0,
+        "x": 5.0,
         "y": 3.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
-        "x": 7.0,
+        "x": 5.0,
         "y": 4.0
       },
       "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 7.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 7.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 7.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 7.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 7.0,
-        "y": 9.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 7.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 7.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 7.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": true,
       "IsEndPoint": false
     },
     {
       "Position": {
+        "x": 5.0,
+        "y": 5.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 5.0,
+        "y": 6.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 5.0,
+        "y": 7.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 5.0,
+        "y": 8.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 5.0,
+        "y": 9.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    }
+  ],
+  [
+    {
+      "Position": {
+        "x": 6.0,
+        "y": 0.0
+      },
+      "IsObstructed": true,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 6.0,
+        "y": 1.0
+      },
+      "IsObstructed": true,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 6.0,
+        "y": 2.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 6.0,
+        "y": 3.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 6.0,
+        "y": 4.0
+      },
+      "IsObstructed": true,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 6.0,
+        "y": 5.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 6.0,
+        "y": 6.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 6.0,
+        "y": 7.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 6.0,
+        "y": 8.0
+      },
+      "IsObstructed": true,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 6.0,
+        "y": 9.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    }
+  ],
+  [
+    {
+      "Position": {
         "x": 7.0,
-        "y": 13.0
+        "y": 0.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
         "x": 7.0,
-        "y": 14.0
+        "y": 1.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
         "x": 7.0,
-        "y": 15.0
+        "y": 2.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
         "x": 7.0,
-        "y": 16.0
+        "y": 3.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
         "x": 7.0,
-        "y": 17.0
+        "y": 4.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
         "x": 7.0,
-        "y": 18.0
+        "y": 5.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
     {
       "Position": {
         "x": 7.0,
-        "y": 19.0
+        "y": 6.0
       },
       "IsObstructed": false,
-      "Parent": null,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 7.0,
+        "y": 7.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 7.0,
+        "y": 8.0
+      },
+      "IsObstructed": false,
+      "IsStartPoint": false,
+      "IsEndPoint": false
+    },
+    {
+      "Position": {
+        "x": 7.0,
+        "y": 9.0
+      },
+      "IsObstructed": false,
       "IsStartPoint": false,
       "IsEndPoint": false
     }
@@ -1621,8 +741,7 @@
         "x": 8.0,
         "y": 0.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1631,8 +750,7 @@
         "x": 8.0,
         "y": 1.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1642,7 +760,6 @@
         "y": 2.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1651,8 +768,7 @@
         "x": 8.0,
         "y": 3.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1661,8 +777,7 @@
         "x": 8.0,
         "y": 4.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1671,8 +786,7 @@
         "x": 8.0,
         "y": 5.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1682,7 +796,6 @@
         "y": 6.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1692,7 +805,6 @@
         "y": 7.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1702,7 +814,6 @@
         "y": 8.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1712,107 +823,6 @@
         "y": 9.0
       },
       "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 8.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 8.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 8.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 8.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 8.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 8.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 8.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 8.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 8.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 8.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     }
@@ -1824,7 +834,6 @@
         "y": 0.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1834,7 +843,6 @@
         "y": 1.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1844,7 +852,6 @@
         "y": 2.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1854,7 +861,6 @@
         "y": 3.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1863,8 +869,7 @@
         "x": 9.0,
         "y": 4.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1873,8 +878,7 @@
         "x": 9.0,
         "y": 5.0
       },
-      "IsObstructed": false,
-      "Parent": null,
+      "IsObstructed": true,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1884,7 +888,6 @@
         "y": 6.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1894,7 +897,6 @@
         "y": 7.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1904,7 +906,6 @@
         "y": 8.0
       },
       "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     },
@@ -1914,2127 +915,6 @@
         "y": 9.0
       },
       "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 9.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 9.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 9.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 9.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 9.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 9.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 9.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 9.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 9.0,
-        "y": 18.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 9.0,
-        "y": 19.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 0.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 1.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 2.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 3.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 9.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 10.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 0.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 1.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 2.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 3.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 9.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 11.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 0.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 1.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 2.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 3.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 9.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 12.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 0.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 1.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 2.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 3.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 9.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 13.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 0.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 1.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 2.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 3.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 9.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 14.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 0.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 1.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 2.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 3.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 9.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 15.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 0.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 1.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 2.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 3.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 9.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 16.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 0.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 1.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 2.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 3.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 9.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 17.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 0.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 1.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 2.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 3.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 9.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 18.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    }
-  ],
-  [
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 0.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 1.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 2.0
-      },
-      "IsObstructed": true,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 3.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 4.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 5.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 6.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 7.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 8.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 9.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 10.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 11.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 12.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 13.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 14.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 15.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 16.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 17.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 18.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
-      "IsStartPoint": false,
-      "IsEndPoint": false
-    },
-    {
-      "Position": {
-        "x": 19.0,
-        "y": 19.0
-      },
-      "IsObstructed": false,
-      "Parent": null,
       "IsStartPoint": false,
       "IsEndPoint": false
     }

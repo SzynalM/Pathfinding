@@ -1,19 +1,23 @@
 ﻿using UnityEngine;
 using Zenject;
+using Pathfinding;
 
-public class NodeFactory : MonoBehaviour, IFactory<GameObject, Transform, Vector2, INode>
+namespace MapGeneration
 {
-    public INode Create(GameObject prefab, Transform parent, Vector2 position)
+    public class NodeFactory : MonoBehaviour, IFactory<GameObject, Transform, Vector2, Node>
     {
-        if(prefab.GetComponent<INode>() == null)
+        public Node Create(GameObject prefab, Transform parent, Vector2 position)
         {
-            Debug.LogError("Invalid node prefab");
-            return null;
+            if (prefab.GetComponent<Node>() == null)
+            {
+                Debug.LogError("Invalid node prefab");
+                return null;
+            }
+            GameObject nodeGameObject = Instantiate(prefab, position, Quaternion.identity, parent);
+            nodeGameObject.name = "Node";
+            Node node = nodeGameObject.GetComponent<Node>();
+            node.Position = position - (Vector2)parent.position;
+            return node;
         }
-        GameObject nodeGameObject = Instantiate(prefab, position, Quaternion.identity, parent);
-        nodeGameObject.name = "Node";
-        INode node = nodeGameObject.GetComponent<INode>();
-        node.Position = position - (Vector2)parent.position;
-        return node;
-    }
+    } 
 }

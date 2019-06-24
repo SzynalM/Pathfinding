@@ -1,35 +1,36 @@
-﻿using Zenject;
-using UnityEngine;
+﻿using UnityEngine;
+using Zenject;
+using UI;
 
-public class DataValidation : MonoBehaviour
+namespace MapGeneration
 {
-    private SignalBus signalBus;
-
-    [Inject]
-    private void Initialize(SignalBus _signalBus)
+    public class DataValidation : MonoBehaviour
     {
-        signalBus = _signalBus;
-    }
+        private SignalBus signalBus;
+        private GameDataContainer gameDataContainer;
 
-    public void Validate(GenerateMapClickedSignal generateMapClickedInfo)
-    {
-        if (CanMapBeGenerated(generateMapClickedInfo.amountOfObstacles, generateMapClickedInfo.edgeLength))
+        [Inject]
+        private void Initialize(SignalBus _signalBus, GameDataContainer _gameDataContainer)
         {
-            signalBus.Fire(new GenerationDataValidatedSignal()
+            signalBus = _signalBus;
+            gameDataContainer = _gameDataContainer;
+        }
+
+        public void Validate(GenerateMapClickedSignal generateMapClickedInfo)
+        {
+            if (CanMapBeGenerated(gameDataContainer.ObstacleAmount, gameDataContainer.EdgeLength))
             {
-                algorithmIndex = generateMapClickedInfo.algorithmIndex,
-                amountOfObstacles = generateMapClickedInfo.amountOfObstacles,
-                edgeLength = generateMapClickedInfo.edgeLength
-            });
+                signalBus.Fire<GenerationDataValidatedSignal>();
+            }
+            else
+            {
+                signalBus.Fire(new ErrorOccuredSignal { textToDisplay = UI.WarningMessages.obstacleAmountTooHigh });
+            }
         }
-        else
-        {
-            signalBus.Fire(new ErrorOccuredSignal { textToDisplay = WarningMessages.obstacleAmountTooHigh});
-        }
-    }
 
-    private bool CanMapBeGenerated(int amountOfObstacles, int edgeLength)
-    {
-        return ((edgeLength * edgeLength) - ((amountOfObstacles * 4) + 2)) >= 2;
-    }
+        private bool CanMapBeGenerated(int amountOfObstacles, int edgeLength)
+        {
+            return ((edgeLength * edgeLength) - ((amountOfObstacles * 4) + 2)) >= 2;
+        }
+    } 
 }

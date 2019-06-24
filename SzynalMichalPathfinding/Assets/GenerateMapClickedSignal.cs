@@ -1,6 +1,7 @@
-﻿public class GenerateMapClickedSignal
+﻿namespace UI
 {
-    public int edgeLength;
-    public int amountOfObstacles;
-    public int algorithmIndex;
+    public class GenerateMapClickedSignal
+    {
+
+    }
 }

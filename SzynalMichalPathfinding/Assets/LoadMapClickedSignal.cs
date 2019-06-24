@@ -1,4 +1,7 @@
-﻿public class LoadMapClickedSignal
+﻿namespace UI
 {
-    public int algorithmIndex;
+    public class LoadMapClickedSignal
+    {
+
+    } 
 }

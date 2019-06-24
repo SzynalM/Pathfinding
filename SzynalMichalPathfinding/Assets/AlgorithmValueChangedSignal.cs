@@ -1,4 +1,7 @@
-﻿public class AlgorithmValueChangedSignal
+﻿namespace UI
 {
-    public int algorithmIndex;
+    public class AlgorithmValueChangedSignal
+    {
+        public int algorithmIndex;
+    } 
 }

@@ -1,4 +1,9 @@
-﻿public class SaveMapClickedSignal
+﻿using Pathfinding;
+
+namespace UI
 {
-    public INode[,] nodesToSave;
+    public class SaveMapClickedSignal
+    {
+        public Node[,] nodesToSave;
+    } 
 }

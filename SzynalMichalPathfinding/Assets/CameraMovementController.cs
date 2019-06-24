@@ -1,43 +1,46 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Camera))]
-public class CameraMovementController : MonoBehaviour
+namespace CameraMovement
 {
-    [SerializeField]
-    private float dragSpeed;
-
-    private Camera mainCamera;
-    private Vector3 dragOrigin;
-    private Vector3 defaultCameraPosition;
-    private Vector3 mousePosition;
-    private Vector3 translation;
-
-    private void Start()
+    [RequireComponent(typeof(Camera))]
+    public class CameraMovementController : MonoBehaviour
     {
-        mainCamera = GetComponent<Camera>();
-        defaultCameraPosition = mainCamera.transform.position;
-    }
+        [SerializeField]
+        private float dragSpeed;
 
-    private void Update()
-    {
-        if (!Input.GetMouseButton(0))
+        private Camera mainCamera;
+        private Vector3 dragOrigin;
+        private Vector3 defaultCameraPosition;
+        private Vector3 mousePosition;
+        private Vector3 translation;
+
+        private void Start()
         {
-            return;
+            mainCamera = GetComponent<Camera>();
+            defaultCameraPosition = mainCamera.transform.position;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        private void Update()
         {
-            dragOrigin = Input.mousePosition;
-            return;
+            if (!Input.GetMouseButton(0))
+            {
+                return;
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                dragOrigin = Input.mousePosition;
+                return;
+            }
+
+            mousePosition = mainCamera.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
+            translation = new Vector3(mousePosition.x, mousePosition.y, 0) * -dragSpeed;
+            transform.Translate(translation, Space.World);
         }
 
-        mousePosition = mainCamera.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
-        translation = new Vector3(mousePosition.x, mousePosition.y, 0) * -dragSpeed;
-        transform.Translate(translation, Space.World);
-    }
-
-    public void ResetView()
-    {
-        mainCamera.transform.position = defaultCameraPosition;
-    }
+        public void ResetView()
+        {
+            mainCamera.transform.position = defaultCameraPosition;
+        }
+    } 
 }

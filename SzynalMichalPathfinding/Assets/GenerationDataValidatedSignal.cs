@@ -1,6 +1,7 @@
-﻿public class GenerationDataValidatedSignal
+﻿namespace MapGeneration
 {
-    public int edgeLength;
-    public int amountOfObstacles;
-    public int algorithmIndex;
+    public class GenerationDataValidatedSignal
+    {
+
+    } 
 }

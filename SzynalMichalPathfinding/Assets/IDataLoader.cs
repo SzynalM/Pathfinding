@@ -1,4 +1,7 @@
-﻿public interface IDataLoader
+﻿namespace DataHandling
 {
-    Node[,] LoadData();
+    public interface IDataLoader
+    {
+        NodeSaveInfo[,] LoadData();
+    } 
 }

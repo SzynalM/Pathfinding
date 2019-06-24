@@ -1,123 +1,98 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 using Zenject;
+using MapGeneration;
 
-public class DijkstraPathfinding : MonoBehaviour, IPathfinder
+namespace Pathfinding
 {
-    private List<DijkstraNode> unexploredNodes = new List<DijkstraNode>();
-    private MapGenerator mapGenerator;
-    private SignalBus signalBus;
-    private Vector2 startPointPosition;
-    private const int pathWeight = 1; //as per requirements
-
-    [Inject]
-    public void Initialize(SignalBus _signalBus, MapGenerator _mapGenerator)
+    public class DijkstraPathfinding : MonoBehaviour, IPathfinder
     {
-        signalBus = _signalBus;
-        mapGenerator = _mapGenerator;
-    }
+        private List<DijkstraNode> unexploredNodes = new List<DijkstraNode>();
+        private MapGenerator mapGenerator;
+        private SignalBus signalBus;
+        private Vector2 startPointPosition;
+        private const int pathWeight = 1; //as per requirements
 
-    public void FindPath(Vector2 startPosition, Vector2 endPosition)
-    {
-        Debug.Log("dijk");
-        startPointPosition = startPosition;
-        GetDijkstraNodes();
-        DijkstraNode startNode = mapGenerator.nodes[(int)startPosition.x, (int)startPosition.y] as DijkstraNode;
-        DijkstraNode endNode = mapGenerator.nodes[(int)endPosition.x, (int)endPosition.y] as DijkstraNode;
-        List<DijkstraNode> foundNeighbours = new List<DijkstraNode>();
-
-        while (unexploredNodes.Count > 0)
+        [Inject]
+        public void Initialize(SignalBus _signalBus, MapGenerator _mapGenerator)
         {
-            unexploredNodes.Sort((x, y) => x.DistanceFromStart.CompareTo(y.DistanceFromStart));
+            signalBus = _signalBus;
+            mapGenerator = _mapGenerator;
+        }
 
-            DijkstraNode currentNode = unexploredNodes[0];
-            if (currentNode == endNode)
+        public void FindPath(Vector2 startPosition, Vector2 endPosition)
+        {
+            startPointPosition = startPosition;
+            GetDijkstraNodes();
+            DijkstraNode startNode = mapGenerator.nodes[(int)startPosition.x, (int)startPosition.y] as DijkstraNode;
+            DijkstraNode endNode = mapGenerator.nodes[(int)endPosition.x, (int)endPosition.y] as DijkstraNode;
+
+            while (unexploredNodes.Count > 0)
             {
-                GetFinalPath(startNode, endNode);
-            }
-            unexploredNodes.Remove(currentNode);
+                unexploredNodes.Sort((x, y) => x.DistanceFromStart.CompareTo(y.DistanceFromStart));
 
-            List<DijkstraNode> neighbours = GetNeighbours(currentNode.Neighbours);
-            foreach (DijkstraNode neighbour in neighbours)
-            {
-                DijkstraNode node = neighbour.GetComponent<DijkstraNode>();
-
-                if (unexploredNodes.Contains(neighbour) && !node.IsObstructed)
+                DijkstraNode currentNode = unexploredNodes[0];
+                if (currentNode == endNode)
                 {
-                    int distance = NodeDistanceCalculator.GetDistance(neighbour.Position, currentNode.Position);
-                    distance = currentNode.DistanceFromStart + distance;
-                    if (distance < node.DistanceFromStart)
+                    signalBus.Fire(new PathFoundSignal() { startingNode = startNode, endNode = endNode });
+                    return;
+                }
+                unexploredNodes.Remove(currentNode);
+
+                List<DijkstraNode> neighbours = GetNeighbours(currentNode.Neighbours);
+                foreach (DijkstraNode neighbour in neighbours)
+                {
+                    if (neighbour == null)
                     {
-                        node.DistanceFromStart = distance;
-                        node.Parent = currentNode;
+                        continue;
+                    }
+                    DijkstraNode node = neighbour.GetComponent<DijkstraNode>();
+
+                    if (unexploredNodes.Contains(neighbour) && !node.IsObstructed)
+                    {
+                        int distance = NodeDistanceCalculator.GetDistance(neighbour.Position, currentNode.Position);
+                        distance = currentNode.DistanceFromStart + distance;
+                        if (distance < node.DistanceFromStart)
+                        {
+                            node.DistanceFromStart = distance;
+                            node.Parent = currentNode;
+                        }
                     }
                 }
             }
         }
-    }
 
-    private List<DijkstraNode> GetNeighbours(List<INode> neighbours)
-    {
-        List<DijkstraNode> nodes = new List<DijkstraNode>();
-        for (int i = 0; i < neighbours.Count; i++)
+        private List<DijkstraNode> GetNeighbours(List<Node> neighbours)
         {
-            nodes.Add(neighbours[i] as DijkstraNode);
-        }
-        return nodes;
-    }
-
-    private void GetFinalPath(DijkstraNode a_StartingNode, DijkstraNode a_EndNode)
-    {
-        List<DijkstraNode> FinalPath = new List<DijkstraNode>();
-        FinalPath.Add(a_EndNode);
-        DijkstraNode currentNode = a_EndNode;
-        Vector2 previousPosition = new Vector2();
-        while (currentNode != a_StartingNode)
-        {
-            if(currentNode == null)
+            List<DijkstraNode> nodes = new List<DijkstraNode>();
+            for (int i = 0; i < neighbours.Count; i++)
             {
-                signalBus.Fire(new ErrorOccuredSignal() { textToDisplay = WarningMessages.noPathFound });
-                return;
+                nodes.Add(neighbours[i] as DijkstraNode);
             }
-            currentNode = currentNode.Parent as DijkstraNode;
-            FinalPath.Add(currentNode);
+            return nodes;
         }
-        FinalPath.Reverse();
-        FinalPath[0].SpriteRenderer.color = Color.green;
-        for (int i = 1; i < FinalPath.Count; i++)
-        {
-            DijkstraNode node = FinalPath[i];
-            previousPosition = FinalPath[i -1].Position;
-            node.SpriteRenderer.color = Color.green;
-            LineRenderer currentRenderer = node.lines.Where(x => (previousPosition - node.Position) * 10 == (Vector2)x.GetPosition(1)).First();
-            currentRenderer.startColor = Color.black;
-            currentRenderer.endColor = Color.black;
-            currentRenderer.startWidth = .2f;
-            currentRenderer.endWidth = .2f;
-            currentRenderer.sortingOrder = -1;
-        }
-    }
 
-    private void GetDijkstraNodes()
-    {
-        for (int i = 0; i < mapGenerator.edgeLength; i++)
+        private void GetDijkstraNodes()
         {
-            for (int j = 0; j < mapGenerator.edgeLength; j++)
+            for (int i = 0; i < mapGenerator.edgeLength; i++)
             {
-                if (mapGenerator.nodes[i, j].IsObstructed == false)
+                for (int j = 0; j < mapGenerator.edgeLength; j++)
                 {
-                    if (i == startPointPosition.x && j == startPointPosition.y)
+                    if (mapGenerator.nodes[i, j].IsObstructed == false)
                     {
-                        (mapGenerator.nodes[i, j] as DijkstraNode).DistanceFromStart = 0;
+                        if (i == startPointPosition.x && j == startPointPosition.y)
+                        {
+                            (mapGenerator.nodes[i, j] as DijkstraNode).DistanceFromStart = 0;
+                        }
+                        else
+                        {
+                            (mapGenerator.nodes[i, j] as DijkstraNode).DistanceFromStart = int.MaxValue;
+                        }
+                        unexploredNodes.Add(mapGenerator.nodes[i, j] as DijkstraNode);
                     }
-                    else
-                    {
-                        (mapGenerator.nodes[i, j] as DijkstraNode).DistanceFromStart = int.MaxValue;
-                    }
-                    unexploredNodes.Add(mapGenerator.nodes[i, j] as DijkstraNode);
+
                 }
             }
         }
-    }
+    } 
 }

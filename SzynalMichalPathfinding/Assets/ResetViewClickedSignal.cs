@@ -1,4 +1,7 @@
-﻿public class ResetViewClickedSignal
+﻿namespace UI
 {
+    public class ResetViewClickedSignal
+    {
 
+    } 
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8103263105051953581}
   - component: {fileID: 7757863252176051022}
-  - component: {fileID: 8204524741590530187}
+  - component: {fileID: 7577060860227018586}
   m_Layer: 0
   m_Name: AStarNode
   m_TagString: Untagged
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8204524741590530187
+--- !u!114 &7577060860227018586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

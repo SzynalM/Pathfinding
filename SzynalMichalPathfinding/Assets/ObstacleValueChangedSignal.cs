@@ -1,4 +1,7 @@
-﻿public class ObstacleValueChangedSignal
+﻿namespace UI
 {
-    public int amountOfObstacles;
+    public class ObstacleValueChangedSignal
+    {
+        public int obstacleAmount;
+    }
 }

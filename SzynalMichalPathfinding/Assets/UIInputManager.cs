@@ -1,70 +1,84 @@
 ﻿using TMPro;
 using UnityEngine;
 using Zenject;
+using MapGeneration;
 
-public class UIInputManager : MonoBehaviour
+namespace UI
 {
-    private SignalBus signalBus;
-    private MapGenerator mapGenerator;
-
-    private int edgeLength = 10;
-    private int amountOfObstacles = 10;
-    private int algorithmIndex = 0;
-
-    [Inject]
-    public void Initialize(SignalBus _signalBus, MapGenerator _mapGenerator)
+    public class UIInputManager : MonoBehaviour
     {
-        signalBus = _signalBus;
-        mapGenerator = _mapGenerator;
-    }
+        [SerializeField]
+        private TMP_Dropdown algorithmDropdown;
 
-    public void OnObstacleValueChanged(TMP_InputField inputField)
-    {
-        amountOfObstacles = int.Parse(inputField.text);
-    }
+        private SignalBus signalBus;
+        private MapGenerator mapGenerator;
 
-    public void OnEdgeLengthValueChanged(TMP_InputField inputField)
-    {
-        edgeLength = int.Parse(inputField.text);
-        if (edgeLength < 10)
+        private int edgeLength = 10;
+        private bool hasMapBeenLoaded;
+
+        [Inject]
+        public void Initialize(SignalBus _signalBus, MapGenerator _mapGenerator)
         {
-            signalBus.Fire(new ErrorOccuredSignal() { textToDisplay = WarningMessages.mapTooLittle });
-            return;
+            signalBus = _signalBus;
+            mapGenerator = _mapGenerator;
         }
-    }
 
-    public void OnAlgorithmValueChanged(TMP_Dropdown dropdown)
-    {
-        algorithmIndex = dropdown.value;
-    }
-
-    public void ResetView()
-    {
-        signalBus.Fire<ResetViewClickedSignal>();
-    }
-
-    public void GenerateNewMap()
-    {
-        if (edgeLength < 10)
+        public void OnObstacleValueChanged(TMP_InputField inputField)
         {
-            signalBus.Fire(new ErrorOccuredSignal() { textToDisplay = WarningMessages.mapTooLittle });
-            return;
+            signalBus.Fire(new ObstacleValueChangedSignal() { obstacleAmount = int.Parse(inputField.text) });
         }
-        signalBus.Fire(new GenerateMapClickedSignal() { algorithmIndex = algorithmIndex, amountOfObstacles = amountOfObstacles, edgeLength = edgeLength });
-    }
 
-    public void SaveMap()
-    {
-        signalBus.Fire(new SaveMapClickedSignal() { nodesToSave = mapGenerator.nodes });
-    }
+        public void OnEdgeLengthValueChanged(TMP_InputField inputField)
+        {
+            edgeLength = int.Parse(inputField.text);
+            if (edgeLength < 10)
+            {
+                signalBus.Fire(new ErrorOccuredSignal() { textToDisplay = WarningMessages.mapTooSmall });
+                return;
+            }
+            signalBus.Fire(new EdgeLengthValueChangedSignal() { edgeLength = edgeLength });
+        }
 
-    public void LoadMap()
-    {
-        signalBus.Fire(new LoadMapClickedSignal() { algorithmIndex = algorithmIndex });
-    }
+        public void OnAlgorithmValueChanged(TMP_Dropdown dropdown)
+        {
+            signalBus.Fire(new AlgorithmValueChangedSignal() { algorithmIndex = dropdown.value });
+        }
 
-    public void QuitGame()
-    {
-        Application.Quit();
+        public void ResetView()
+        {
+            signalBus.Fire<ResetViewClickedSignal>();
+        }
+
+        public void GenerateNewMap()
+        {
+            algorithmDropdown.interactable = true;
+            if (edgeLength < 10)
+            {
+                signalBus.Fire(new ErrorOccuredSignal() { textToDisplay = WarningMessages.mapTooSmall });
+                return;
+            }
+            signalBus.Fire<GenerateMapClickedSignal>();
+        }
+
+        public void FindPath()
+        {
+            signalBus.Fire<FindPathSignal>();
+        }
+
+        public void SaveMap()
+        {
+            signalBus.Fire(new SaveMapClickedSignal() { nodesToSave = mapGenerator.nodes });
+        }
+
+        public void LoadMap()
+        {
+            hasMapBeenLoaded = true;
+            signalBus.Fire<LoadMapClickedSignal>();
+        }
+
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
     }
 }

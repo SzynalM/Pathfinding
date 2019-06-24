@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 
-public static class NodeDistanceCalculator
+namespace Pathfinding
 {
-    public static int GetDistance(Vector2 from, Vector2 to)
+    public static class NodeDistanceCalculator
     {
-        return Mathf.Abs((int)((from.x - to.x) + (from.y - to.y)));
-    }
+        public static int GetDistance(Vector2 from, Vector2 to)
+        {
+            return Mathf.Abs((int)((from.x - to.x) + (from.y - to.y)));
+        }
+    } 
 }

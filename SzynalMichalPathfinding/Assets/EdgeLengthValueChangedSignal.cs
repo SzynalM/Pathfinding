@@ -1,4 +1,7 @@
-﻿public class EdgeLengthValueChangedSignal
+﻿namespace UI
 {
-    public int edgeLength;
+    public class EdgeLengthValueChangedSignal
+    {
+        public int edgeLength;
+    }
 }

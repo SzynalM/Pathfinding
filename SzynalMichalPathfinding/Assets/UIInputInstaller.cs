@@ -1,45 +1,54 @@
 ﻿using Zenject;
 using UnityEngine;
+using CameraMovement;
+using MapGeneration;
+using DataHandling;
 
-public class UIInputInstaller : MonoInstaller<UIInputInstaller>
+namespace UI
 {
-    [SerializeField]
-    private UIInputManager uIInputManager;
-    [SerializeField]
-    private CameraMovementController cameraMovementController;
-    [SerializeField]
-    private MapGenerator mapGenerator;
-    [SerializeField]
-    private DataValidation dataValidation;
-
-    public override void InstallBindings()
+    public class UIInputInstaller : MonoInstaller<UIInputInstaller>
     {
-        SignalBusInstaller.Install(Container);
-        DeclareSignals();
-        BindSignals();
-    }
+        [SerializeField]
+        private UIInputManager uIInputManager;
+        [SerializeField]
+        private CameraMovementController cameraMovementController;
+        [SerializeField]
+        private MapGenerator mapGenerator;
+        [SerializeField]
+        private DataValidation dataValidation;
+        [SerializeField]
+        private GameDataContainer gameDataContainer;
 
-    private void DeclareSignals()
-    {
-        Container.DeclareSignal<GenerateMapClickedSignal>();
-        Container.DeclareSignal<SaveMapClickedSignal>();
-        Container.DeclareSignal<LoadMapClickedSignal>();
+        public override void InstallBindings()
+        {
+            SignalBusInstaller.Install(Container);
+            Container.Bind<GameDataContainer>().FromInstance(gameDataContainer);
+            DeclareSignals();
+            BindSignals();
+        }
 
-        Container.DeclareSignal<EdgeLengthValueChangedSignal>();
-        Container.DeclareSignal<ObstacleValueChangedSignal>();
-        Container.DeclareSignal<AlgorithmValueChangedSignal>();
-        Container.DeclareSignal<ResetViewClickedSignal>();
-    }
+        private void DeclareSignals()
+        {
+            Container.DeclareSignal<GenerateMapClickedSignal>();
+            Container.DeclareSignal<SaveMapClickedSignal>();
+            Container.DeclareSignal<LoadMapClickedSignal>();
 
-    private void BindSignals()
-    {
-        Container.BindSignal<GenerateMapClickedSignal>().ToMethod(dataValidation.Validate);
-        Container.BindSignal<SaveMapClickedSignal>().ToMethod(new DataSaver().SaveGame);
-        Container.BindSignal<LoadMapClickedSignal>().ToMethod(mapGenerator.GenerateMap);
+            Container.DeclareSignal<EdgeLengthValueChangedSignal>();
+            Container.DeclareSignal<ObstacleValueChangedSignal>();
+            Container.DeclareSignal<AlgorithmValueChangedSignal>();
+            Container.DeclareSignal<ResetViewClickedSignal>();
+        }
 
-        Container.BindSignal<ObstacleValueChangedSignal>().ToMethod(cameraMovementController.ResetView);
-        Container.BindSignal<EdgeLengthValueChangedSignal>().ToMethod(cameraMovementController.ResetView);
-        Container.BindSignal<AlgorithmValueChangedSignal>().ToMethod(cameraMovementController.ResetView);
-        Container.BindSignal<ResetViewClickedSignal>().ToMethod(cameraMovementController.ResetView);
-    }
+        private void BindSignals()
+        {
+            Container.BindSignal<GenerateMapClickedSignal>().ToMethod(dataValidation.Validate);
+            Container.BindSignal<SaveMapClickedSignal>().ToMethod(new DataSaver().SaveGame);
+            Container.BindSignal<LoadMapClickedSignal>().ToMethod(mapGenerator.GenerateMap);
+
+            Container.BindSignal<ObstacleValueChangedSignal>().ToMethod(gameDataContainer.SetObstacleAmount);
+            Container.BindSignal<EdgeLengthValueChangedSignal>().ToMethod(gameDataContainer.SetEdgeLength);
+            Container.BindSignal<AlgorithmValueChangedSignal>().ToMethod(gameDataContainer.SetAlgorithmIndex);
+            Container.BindSignal<ResetViewClickedSignal>().ToMethod(cameraMovementController.ResetView);
+        }
+    } 
 }

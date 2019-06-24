@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
-public interface IPathfinder
+namespace Pathfinding
 {
-    void FindPath(Vector2 startPosition, Vector2 endPosition);
+    public interface IPathfinder
+    {
+        void FindPath(Vector2 startPosition, Vector2 endPosition);
+    } 
 }

@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 
-public class MapGeneratedSignal 
+namespace MapGeneration
 {
-    public Vector2 starPosition;
-    public Vector2 endPosition;
-    public int edgeLength;
+    public class MapGeneratedSignal
+    {
+        public Vector2 starPosition;
+        public Vector2 endPosition;
+    } 
 }
