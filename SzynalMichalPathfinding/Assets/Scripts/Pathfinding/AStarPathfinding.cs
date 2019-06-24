@@ -5,7 +5,7 @@ using MapGeneration;
 
 namespace Pathfinding
 {
-    public class AStarPathfinding : MonoBehaviour, IPathfinder
+    public class AStarPathfinding : MonoBehaviour
     {
         private SignalBus signalBus;
         private MapGenerator mapGenerator;

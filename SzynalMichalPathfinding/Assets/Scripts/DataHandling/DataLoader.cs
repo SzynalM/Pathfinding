@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DataHandling
 {
-    public class DataLoader : IDataLoader
+    public class DataLoader 
     {
         private string path;
         private string fileName = "SavedMap.json";

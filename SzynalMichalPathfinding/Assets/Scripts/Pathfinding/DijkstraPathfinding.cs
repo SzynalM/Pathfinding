@@ -5,7 +5,7 @@ using MapGeneration;
 
 namespace Pathfinding
 {
-    public class DijkstraPathfinding : MonoBehaviour, IPathfinder
+    public class DijkstraPathfinding : MonoBehaviour
     {
         private List<DijkstraNode> unexploredNodes = new List<DijkstraNode>();
         private MapGenerator mapGenerator;
