@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7757863252176051022}
   - component: {fileID: 7940916131973834475}
   m_Layer: 0
-  m_Name: AStarNodePrefab
+  m_Name: DijkstraNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,4 +94,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSprite: {fileID: 21300000, guid: 81d484d09b84f2242a804940933509bf, type: 3}
   endSprite: {fileID: 21300000, guid: b7d954da8f844da4ca1642199c382b63, type: 3}
+  lineRendererChildGameObject: {fileID: 5890916837964544774, guid: 60fcbfe77d696b84aa00d56cde69ac92,
+    type: 3}
   lines: []

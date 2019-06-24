@@ -2,5 +2,5 @@
 
 public interface IPathfinder
 {
-    void FindPath(Vector2 startPoint, Vector2 endPoint);
+    void FindPath(Vector2 startPosition, Vector2 endPosition);
 }

@@ -1,17 +1,24 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Zenject;
 
-public class AStarPathfinding : MonoBehaviour
+public class AStarPathfinding : MonoBehaviour, IPathfinder
 {
-    [SerializeField]
-    MapGenerator mapGenerator;
+    private SignalBus signalBus;
+    private MapGenerator mapGenerator;
 
-    public void FindPath(Vector3 startPoint, Vector3 endPoint)
+    [Inject]
+    public void Initialize(SignalBus _signalBus, MapGenerator _mapGenerator)
     {
-        Debug.Log("Astar pathfinding");
-        AStarNode StartNode = (AStarNode)mapGenerator.nodes[(int)startPoint.x, (int)startPoint.y];
-        AStarNode TargetNode = (AStarNode)mapGenerator.nodes[(int)endPoint.x, (int)endPoint.y];
+        signalBus = _signalBus;
+        mapGenerator = _mapGenerator;
+    }
+
+    public void FindPath(Vector2 startPosition, Vector2 endPosition)
+    {
+        AStarNode StartNode = mapGenerator.nodes[(int)startPosition.x, (int)startPosition.y] as AStarNode;
+        AStarNode TargetNode = mapGenerator.nodes[(int)endPosition.x, (int)endPosition.y] as AStarNode;
 
         List<AStarNode> OpenList = new List<AStarNode>();
         HashSet<AStarNode> ClosedList = new HashSet<AStarNode>();
@@ -58,7 +65,6 @@ public class AStarPathfinding : MonoBehaviour
                 }
             }
         }
-        Debug.LogError("No path found");
     }
 
 
@@ -73,7 +79,7 @@ public class AStarPathfinding : MonoBehaviour
         {
             if (currentNode == null)
             {
-                Debug.LogError("No path found");
+                signalBus.Fire(new ErrorOccuredSignal() { textToDisplay = WarningMessages.noPathFound });
                 return;
             }
             currentNode = currentNode.Parent as AStarNode;

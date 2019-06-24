@@ -10,7 +10,9 @@ public class NodeFactory : MonoBehaviour, IFactory<GameObject, Transform, Vector
             Debug.LogError("Invalid node prefab");
             return null;
         }
-        INode node = Instantiate(prefab, position, Quaternion.identity, parent).GetComponent<INode>();
+        GameObject nodeGameObject = Instantiate(prefab, position, Quaternion.identity, parent);
+        nodeGameObject.name = "Node";
+        INode node = nodeGameObject.GetComponent<INode>();
         node.Position = position - (Vector2)parent.position;
         return node;
     }

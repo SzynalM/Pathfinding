@@ -8,6 +8,8 @@ public class DijkstraNode : MonoBehaviour, INode
     private Sprite startSprite;
     [SerializeField]
     private Sprite endSprite;
+    [SerializeField]
+    private GameObject lineRendererChildGameObject;
     public int DistanceFromStart { get; set; }
     public Vector2 Position { get; set; }
     private List<INode> neighbours { get; set; }
@@ -62,16 +64,9 @@ public class DijkstraNode : MonoBehaviour, INode
     {
         for (int i = 0; i < neighbours.Count; i++)
         {
-            GameObject lineRendererChild = Instantiate(new GameObject(), transform, false);
-            LineRenderer renderer = lineRendererChild.AddComponent<LineRenderer>();
-            renderer.sortingOrder = -2;
-            renderer.startWidth = .05f;
-            renderer.endWidth = .05f;
-            renderer.startColor = Color.black;
-            renderer.endColor = Color.black;
-            renderer.positionCount = 2;
-            renderer.useWorldSpace = false;
-            renderer.material = new Material(Shader.Find("UI/Default"));
+            GameObject lineRendererChild = Instantiate(lineRendererChildGameObject, transform);
+            lineRendererChild.name = "LineRenderer";
+            LineRenderer renderer = lineRendererChild.GetComponent<LineRenderer>();
             renderer.SetPosition(0, lineRendererChild.transform.localPosition);
             renderer.SetPosition(1, (neighbours[i].Position - Position) * 10);
             lines.Add(renderer);

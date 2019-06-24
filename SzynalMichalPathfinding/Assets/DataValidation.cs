@@ -1,12 +1,35 @@
-﻿public static class DataValidation
+﻿using Zenject;
+using UnityEngine;
+
+public class DataValidation : MonoBehaviour
 {
-    public static bool Validate(int amountOfObstacles, int edgeLength)
+    private SignalBus signalBus;
+
+    [Inject]
+    private void Initialize(SignalBus _signalBus)
     {
-        return CanObstacleBePlaced(amountOfObstacles, edgeLength);
+        signalBus = _signalBus;
     }
 
-    private static bool CanObstacleBePlaced(int amountOfObstacles, int edgeLength)
+    public void Validate(GenerateMapClickedSignal generateMapClickedInfo)
     {
-        return ((edgeLength * edgeLength) - ((amountOfObstacles / 4) + 2)) >= 2;
+        if (CanMapBeGenerated(generateMapClickedInfo.amountOfObstacles, generateMapClickedInfo.edgeLength))
+        {
+            signalBus.Fire(new GenerationDataValidatedSignal()
+            {
+                algorithmIndex = generateMapClickedInfo.algorithmIndex,
+                amountOfObstacles = generateMapClickedInfo.amountOfObstacles,
+                edgeLength = generateMapClickedInfo.edgeLength
+            });
+        }
+        else
+        {
+            signalBus.Fire(new ErrorOccuredSignal { textToDisplay = WarningMessages.obstacleAmountTooHigh});
+        }
+    }
+
+    private bool CanMapBeGenerated(int amountOfObstacles, int edgeLength)
+    {
+        return ((edgeLength * edgeLength) - ((amountOfObstacles * 4) + 2)) >= 2;
     }
 }

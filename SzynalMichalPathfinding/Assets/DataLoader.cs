@@ -2,15 +2,14 @@
 using UnityEngine;
 using Newtonsoft.Json;
 
-public class DataLoader : MonoBehaviour
+public class DataLoader : IDataLoader
 {
     private string path;
     private string fileName = "SavedMap.json";
 
-    public Node[,] LoadMap()
+    public Node[,] LoadData()
     {
-        path = Path.Combine(Application.persistentDataPath, fileName);
-        Debug.Log(path);
+        path = Path.Combine(Application.dataPath, fileName);
         Node[,] loadedNodes;
         if (File.Exists(path))
         {
@@ -18,6 +17,13 @@ public class DataLoader : MonoBehaviour
             string rawLoadedData = sw.ReadToEnd();
             sw.Close();
             loadedNodes = JsonConvert.DeserializeObject<Node[,]>(rawLoadedData);
+            int x = 0;
+            foreach(Node node in loadedNodes)
+            {
+                x++;
+            }
+
+            Debug.Log("Loaded nodes amount: " + x);
             return loadedNodes;
         }
         else
@@ -26,4 +32,14 @@ public class DataLoader : MonoBehaviour
             return null;
         }
     }
+}
+
+[CreateAssetMenu(fileName = "GameConfiguration")]
+public class GameConfiguration : ScriptableObject
+{
+    public string saveFileName;
+    public Sprite startNodeSprite;
+    public Sprite endNodeSprite;
+    public Color foundPathColor;
+    public Color obstructedNodesColor;
 }

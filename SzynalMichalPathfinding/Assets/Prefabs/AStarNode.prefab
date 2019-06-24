@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9feef19d3d1b8842a6f86b785388832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineRendererChildGameObject: {fileID: 5890916837964544774, guid: 60fcbfe77d696b84aa00d56cde69ac92,
+    type: 3}
   startSprite: {fileID: 21300000, guid: 81d484d09b84f2242a804940933509bf, type: 3}
   endSprite: {fileID: 21300000, guid: b7d954da8f844da4ca1642199c382b63, type: 3}
   lines: []

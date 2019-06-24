@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(SpriteRenderer)), System.Serializable]
 public class AStarNode : MonoBehaviour, INode
 {
     public float G_Cost { get; set; }
@@ -12,6 +12,8 @@ public class AStarNode : MonoBehaviour, INode
     private bool isObstructed;
     public bool IsObstructed { get { return isObstructed; } set { isObstructed = value; ChangeColor(); } }
 
+    [SerializeField]
+    private GameObject lineRendererChildGameObject;
     [SerializeField]
     private Sprite startSprite;
     [SerializeField]
@@ -67,16 +69,9 @@ public class AStarNode : MonoBehaviour, INode
     {
         for (int i = 0; i < neighbours.Count; i++)
         {
-            GameObject lineRendererChild = Instantiate(new GameObject(), transform, false);
-            LineRenderer renderer = lineRendererChild.AddComponent<LineRenderer>();
-            renderer.sortingOrder = -2;
-            renderer.startWidth = .05f;
-            renderer.endWidth = .05f;
-            renderer.startColor = Color.black;
-            renderer.endColor = Color.black;
-            renderer.positionCount = 2;
-            renderer.useWorldSpace = false;
-            renderer.material = new Material(Shader.Find("UI/Default"));
+            GameObject lineRendererChild = Instantiate(lineRendererChildGameObject, transform);
+            lineRendererChild.name = "LineRenderer";
+            LineRenderer renderer = lineRendererChild.GetComponent<LineRenderer>();
             renderer.SetPosition(0, lineRendererChild.transform.localPosition);
             renderer.SetPosition(1, (neighbours[i].Position - Position) * 10);
             lines.Add(renderer);

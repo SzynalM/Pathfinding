@@ -1,21 +1,30 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Zenject;
 
 public class DijkstraPathfinding : MonoBehaviour, IPathfinder
 {
     private List<DijkstraNode> unexploredNodes = new List<DijkstraNode>();
-    [SerializeField]
     private MapGenerator mapGenerator;
-    private Vector2 startPointIndexes;
+    private SignalBus signalBus;
+    private Vector2 startPointPosition;
     private const int pathWeight = 1; //as per requirements
 
-    public void FindPath(Vector2 startPoint, Vector2 endPoint)
+    [Inject]
+    public void Initialize(SignalBus _signalBus, MapGenerator _mapGenerator)
     {
-        startPointIndexes = startPoint;
+        signalBus = _signalBus;
+        mapGenerator = _mapGenerator;
+    }
+
+    public void FindPath(Vector2 startPosition, Vector2 endPosition)
+    {
+        Debug.Log("dijk");
+        startPointPosition = startPosition;
         GetDijkstraNodes();
-        DijkstraNode startNode = mapGenerator.nodes[(int)startPoint.x, (int)startPoint.y] as DijkstraNode;
-        DijkstraNode endNode = mapGenerator.nodes[(int)endPoint.x, (int)endPoint.y] as DijkstraNode;
+        DijkstraNode startNode = mapGenerator.nodes[(int)startPosition.x, (int)startPosition.y] as DijkstraNode;
+        DijkstraNode endNode = mapGenerator.nodes[(int)endPosition.x, (int)endPosition.y] as DijkstraNode;
         List<DijkstraNode> foundNeighbours = new List<DijkstraNode>();
 
         while (unexploredNodes.Count > 0)
@@ -25,7 +34,6 @@ public class DijkstraPathfinding : MonoBehaviour, IPathfinder
             DijkstraNode currentNode = unexploredNodes[0];
             if (currentNode == endNode)
             {
-                Debug.Log("Finished");
                 GetFinalPath(startNode, endNode);
             }
             unexploredNodes.Remove(currentNode);
@@ -69,7 +77,7 @@ public class DijkstraPathfinding : MonoBehaviour, IPathfinder
         {
             if(currentNode == null)
             {
-                Debug.LogError("No path found");
+                signalBus.Fire(new ErrorOccuredSignal() { textToDisplay = WarningMessages.noPathFound });
                 return;
             }
             currentNode = currentNode.Parent as DijkstraNode;
@@ -99,7 +107,7 @@ public class DijkstraPathfinding : MonoBehaviour, IPathfinder
             {
                 if (mapGenerator.nodes[i, j].IsObstructed == false)
                 {
-                    if (i == startPointIndexes.x && j == startPointIndexes.y)
+                    if (i == startPointPosition.x && j == startPointPosition.y)
                     {
                         (mapGenerator.nodes[i, j] as DijkstraNode).DistanceFromStart = 0;
                     }
